@@ -29,8 +29,8 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.6);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #9DAF9A;  /* The default color of the main navmenu links */
+  --nav-hover-color: #477062; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -519,7 +519,7 @@ h6 {
 }
 
 .footer .copyright {
-  border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-top: 1px solid color-mix(in srgb, #9DAF9A, transparent 80%);
   margin-top: 25px;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -579,7 +579,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: #9DAF9A;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -760,9 +760,6 @@ section,
   z-index: 1;
 }
 
-.hero .fern {
-  max-height: 200px !important;
-}
 
 .hero .container,
 .hero .container-fluid {
@@ -785,14 +782,14 @@ section,
 
 .hero .btn-get-started {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: #9DAF9A;
+  border-color: var(--accent-color);
   font-family: var(--heading-font);
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 12px 30px;
-  border-radius: 50px;
   transition: 0.5s;
 }
 
