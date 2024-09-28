@@ -11,7 +11,15 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+@font-face {
+  font-family: 'Arterio'; /* Choose a custom name for your font */
+  src: url('./assets/fonts/arterio.otf') format('opentype'); /* Path to the .otf file */
+  font-weight: normal; /* Optional: Specify weight */
+  font-style: normal;  /* Optional: Specify style */
+}
+
 :root {
+  --brand-font: font-family: 'Arterio';
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Montserrat",  sans-serif;
   --nav-font: "Raleway",  sans-serif;
@@ -157,7 +165,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-height: 100px;
   margin-right: 8px;
 }
 
@@ -415,6 +423,23 @@ h6 {
   }
 }
 
+.navmenu .btn-get-started {
+  color: var(--contrast-color);
+  background: #9DAF9A;
+  border: 0.5px solid #477062;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 30px;
+  transition: 0.5s;
+}
+
+.navmenu .btn-get-started:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+  color: #f6fcfe;
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -637,8 +662,9 @@ h6 {
 }
 
 .page-title h1 {
+  font-family: var(--brand-font);
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 300;
   margin-bottom: 10px;
 }
 
@@ -694,8 +720,9 @@ section,
 }
 
 .section-title h2 {
+  font-family: var(--brand-font);
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 300;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -735,7 +762,7 @@ section,
     position: absolute;
     content: "";
     width: 44%;
-    background-image: linear-gradient(180deg, color-mix(in srgb, var(--surface-color), transparent 15%), color-mix(in srgb, var(--surface-color), transparent 15%) 100%), linear-gradient(180deg, rgb(222, 216, 198), rgb(222, 216, 198) 100%);
+    background-image: linear-gradient(180deg, color-mix(in srgb, var(--surface-color), transparent 5%), color-mix(in srgb, var(--surface-color), transparent 5%) 70%), linear-gradient(180deg, rgb(222, 216, 198), rgb(222, 216, 198) 70%);
     top: 0;
     bottom: 0;
     z-index: 2;
@@ -768,9 +795,10 @@ section,
 }
 
 .hero h1 {
+  font-family: var(--brand-font);
   margin: 0;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .hero blockquote {
@@ -783,7 +811,7 @@ section,
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: #9DAF9A;
-  border-color: var(--accent-color);
+  border: 0.5px solid #477062;
   font-family: var(--heading-font);
   font-weight: 600;
   font-size: 14px;
@@ -998,7 +1026,7 @@ section,
 
 .call-to-action:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  background: rgba(250, 249, 246, 0.4);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1012,23 +1040,23 @@ section,
 .call-to-action h3 {
   font-size: 28px;
   font-weight: 700;
-  color: var(--default-color);
+  color: #C08B67;
 }
 
 .call-to-action p {
-  color: var(--default-color);
+  color: #2b180d;
 }
 
 .call-to-action .cta-btn {
-  background: var(--accent-color);
+  background: #9DAF9A;
   color: var(--contrast-color);
+  border: 0.5px solid #477062;
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 12px 40px;
-  border-radius: 50px;
   transition: 0.5s;
   margin: 10px;
 }
