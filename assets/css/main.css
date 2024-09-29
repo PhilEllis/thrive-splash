@@ -14,8 +14,6 @@
 @font-face {
   font-family: 'Arterio'; /* Choose a custom name for your font */
   src: url('./assets/fonts/arterio.otf') format('opentype'); /* Path to the .otf file */
-  font-weight: normal; /* Optional: Specify weight */
-  font-style: normal;  /* Optional: Specify style */
 }
 
 :root {
@@ -445,7 +443,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: #477062;
+  background-color: #9DAF9A;
   font-size: 14px;
   position: relative;
 }
@@ -466,10 +464,10 @@ h6 {
 
 .footer .footer-about .logo span {
   color: var(--heading-color);
+  font-family: Arterio;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 1px;
-  font-family: var(--heading-font);
 }
 
 .footer .footer-about p {
@@ -478,27 +476,27 @@ h6 {
 }
 
 .footer .social-links a {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: var(--accent-color);
+  background-color: #9DAF9A;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 30px;
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--contrast-color);
-  background-color: color-mix(in srgb, var(--accent-color) 90%, black 15%);
+  font-size: 34px;
 }
 
 .footer h4 {
+  font-family: Arterio;;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 300;
   position: relative;
   padding-bottom: 12px;
 }
@@ -544,7 +542,7 @@ h6 {
 }
 
 .footer .copyright {
-  border-top: 1px solid color-mix(in srgb, #9DAF9A, transparent 80%);
+  border-top: 1px solid color-mix(in srgb, #477062, transparent 70%);
   margin-top: 25px;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -662,7 +660,7 @@ h6 {
 }
 
 .page-title h1 {
-  font-family: var(--brand-font);
+  font-family: Arterio;
   font-size: 42px;
   font-weight: 300;
   margin-bottom: 10px;
@@ -720,7 +718,7 @@ section,
 }
 
 .section-title h2 {
-  font-family: var(--brand-font);
+  font-family: Arterio;
   font-size: 32px;
   font-weight: 300;
   margin-bottom: 20px;
@@ -795,7 +793,7 @@ section,
 }
 
 .hero h1 {
-  font-family: var(--brand-font);
+  font-family: Arterio;
   margin: 0;
   font-size: 3rem;
   font-weight: 300;
@@ -884,6 +882,7 @@ section,
 }
 
 .why-us h3 {
+  font-family: Arterio;
   font-size: 24px;
   font-weight: 700;
 }
@@ -1038,8 +1037,9 @@ section,
 }
 
 .call-to-action h3 {
+  font-family: Arterio;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 400;
   color: #C08B67;
 }
 
