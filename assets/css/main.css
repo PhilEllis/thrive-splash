@@ -781,14 +781,14 @@ section,
 }
 
 @media (max-width: 767px) {
-  .hero:after {
-    position: absolute;
-    content: "";
-    width: 20%;
-    background-image: linear-gradient(180deg, color-mix(in srgb, var(--surface-color), transparent 5%), color-mix(in srgb, var(--surface-color), transparent 5%) 70%), linear-gradient(180deg, rgb(222, 216, 198), rgb(222, 216, 198) 70%);
-    top: 0;
-    bottom: 0;
-    z-index: 2;
+  .hero {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 0px 0 0px;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/jessherocrop.jpg');
   }
 }
 
