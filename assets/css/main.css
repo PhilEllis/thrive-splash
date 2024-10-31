@@ -422,7 +422,7 @@ h6 {
 }
 
 .navmenu .btn-get-started {
-  display: none !important;
+  display: none;
   color: var(--contrast-color);
   background: #9DAF9A;
   border: 0.5px solid #477062;
@@ -438,6 +438,18 @@ h6 {
 .navmenu .btn-get-started:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
   color: #f6fcfe;
+}
+
+@media (min-width: 1200px) {
+  .navmenu .btn-get-started {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navmenu .btn-get-started {
+    display: inline-block;
+  }
 }
 /*--------------------------------------------------------------
 # Global Footer
