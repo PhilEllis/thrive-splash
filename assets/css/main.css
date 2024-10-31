@@ -1089,6 +1089,9 @@ section,
   color: var(--accent-color);
 }
 
+#services .privacy-policy {
+  padding-top: 150px;
+}
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
