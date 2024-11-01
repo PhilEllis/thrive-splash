@@ -756,6 +756,7 @@ section,
   margin-bottom: 0;
 }
 
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -794,50 +795,18 @@ section,
 
 @media (max-width: 767px) {
   .hero {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    padding: 0px 0 0px;
-    display: flex;
-    align-items: center;
-    background-image: url('../img/jessherocrop.jpg');
-  }
-}
-
-/* Responsive changes for smaller screens */
-@media (max-width: 991px) {
-  /* Adjust the font size for smaller screens */
-  .hero h1 {
-    font-size: 2rem; /* Decreased from 3rem */
-    line-height: 1.2;
+    background-image: url('/assets/img/jessmobilecrop.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
   }
 
-  .hero blockquote {
-    font-size: 1rem; /* Adjust blockquote font size */
-    margin: 20px 0; /* Reduce margin */
-  }
-
-  .hero .btn-get-started {
-    font-size: 12px; /* Smaller button font */
-    padding: 10px 20px; /* Reduce padding */
-  }
-
-  /* Ensure the background image remains full-screen */
   .hero img {
-    position: absolute;
-    inset: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
+    display: none !important;
   }
 
-  /* Keep the overlay effect */
-  .hero:before {
-    background: color-mix(in srgb, var(--background-color), transparent 40%);
-    inset: 0;
-    z-index: 2;
+  .hero .hero-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
   }
 }
 
@@ -905,22 +874,6 @@ section,
   font-weight: 600;
 }
 
-.hero .btn-watch-video i {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 32px;
-  transition: 0.3s;
-  line-height: 0;
-  margin-right: 8px;
-}
-
-.hero .btn-watch-video:hover {
-  color: var(--default-color);
-}
-
-.hero .btn-watch-video:hover i {
-  color: var(--default-color);
-}
-
 @media (max-width: 640px) {
   .hero h1 {
     font-size: 28px;
@@ -945,6 +898,10 @@ section,
   }
 }
 
+body, .hero, .hero img {
+  margin: 0;
+  padding: 0;
+}
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
