@@ -2784,7 +2784,7 @@ body, .hero, .hero img {
 }
 
 /*--------------------------------------------------------------
-# Faq Section
+# Faq Section color-mix(in srgb, var(--default-color), transparent 30%)
 --------------------------------------------------------------*/
 .faq .content h3 {
   font-weight: 400;
