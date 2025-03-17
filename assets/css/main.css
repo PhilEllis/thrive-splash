@@ -40,7 +40,7 @@
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #56b8e6; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #477062; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -98,7 +98,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: rgba(255, 255, 255, 0.8);
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
@@ -714,7 +714,7 @@ section,
 
 .hero .carousel {
   width: 100%;
-  min-height: calc(100vh - 20px);
+  min-height: calc(100vh - 10px);
   padding: 0;
   margin: 0;
   position: relative;
@@ -749,12 +749,14 @@ section,
 }
 
 .hero .container {
-  background: color-mix(in srgb, var(--surface-color), transparent 40%);
+  background: color-mix(in srgb, var(--surface-color), transparent 50%);
   position: relative;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
+  margin-left: 200px;
+  margin-right: 200px;
   border: 2px solid var(--accent-color);
   z-index: 3;
 }
@@ -770,7 +772,7 @@ section,
   font-family: Arterio;
   margin-bottom: 20px;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
@@ -947,6 +949,10 @@ body, .hero, .hero img {
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
+
+.why-us .container {
+  margin-top: 70px;
+}
 .why-us .img-bg {
   min-height: 500px;
   position: relative;
