@@ -98,11 +98,11 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0.8);
+  --background-color: rgba(255, 255, 255, 1);
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
+  padding-bottom: 5px;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -112,7 +112,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 100px;
+  max-height: 80px;
   margin-right: 12px;
 }
 
@@ -710,41 +710,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------
-.section-title {
-  text-align: center;
-  padding-bottom: 60px;
-  position: relative;
-}
-
-.section-title h2 {
-  font-family: Arterio;
-  font-size: 32px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
-}
-
-.section-title h2:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--accent-color);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.section-title p {
-  margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
 # Hero Section Company
 --------------------------------------------------------------*/
 .hero {
@@ -753,7 +718,7 @@ section,
 
 .hero .carousel {
   width: 100%;
-  min-height: calc(100vh - 10px);
+  min-height: calc(100vh - 100px);
   padding: 0;
   margin: 0;
   position: relative;
@@ -789,15 +754,12 @@ section,
 
 .hero .container {
   background: color-mix(in srgb, var(--surface-color), transparent 50%);
-  position: relative;
+  position: absolute;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-bottom: 70px;
-  margin-left: 200px;
-  margin-right: 200px;
-  border: 2px solid var(--accent-color);
-  z-index: 3;
+  margin: 0;
+  border-top: 2px solid var(--accent-color);
 }
 
 @media (max-width: 1200px) {
