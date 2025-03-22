@@ -26,7 +26,7 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: rgba(222, 216, 198, 0.2);  /* Background color for the entire website, including individual sections */
-  --default-color: #2b180d; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #1d0808; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #C08B67; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #477062; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -710,8 +710,141 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section Company
+# Hero Section Impact
 --------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  position: relative;
+  padding: 140px 0 0 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero h2 .accent {
+  color: var(--conrast-color);
+}
+
+.hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.hero .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 50px;
+  transition: 0.3s;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.hero .btn-get-started:hover {
+  border-color: color-mix(in srgb, var(--default-color), transparent 60%);
+}
+
+.hero .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  font-weight: 600;
+  color: var(--default-color);
+}
+
+.hero .btn-watch-video i {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero .btn-watch-video:hover i {
+  color: var(--default-color);
+}
+
+@media (max-width: 640px) {
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  .hero .btn-get-started,
+  .hero .btn-watch-video {
+    font-size: 14px;
+  }
+}
+
+.hero .icon-boxes {
+  padding-bottom: 60px;
+  z-index: 4;
+}
+
+@media (min-width: 1200px) {
+  .hero .icon-boxes:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(50% + 20px);
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+}
+
+.hero .icon-box {
+  padding: 60px 30px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.hero .icon-box .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.hero .icon-box .title a {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  transition: 0.3s;
+}
+
+.hero .icon-box .icon {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  font-size: 48px;
+  line-height: 1;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section Company
+--------------------------------------------------------------
 .hero {
   padding: 0;
 }
@@ -754,7 +887,7 @@ section,
 
 .hero .container {
   background: color-mix(in srgb, var(--surface-color), transparent 50%);
-  position: absolute;
+  position: relative;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -762,25 +895,6 @@ section,
   border-top: 2px solid var(--accent-color);
 }
 
-@media (max-width: 1200px) {
-  .hero .container {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}
-
-.hero h2 {
-  font-family: Arterio;
-  margin-bottom: 20px;
-  font-size: 36px;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 30px;
-  }
-}
 
 .hero .btn-get-started {
   color: var(--contrast-color);
