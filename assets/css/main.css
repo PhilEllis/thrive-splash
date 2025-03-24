@@ -1231,7 +1231,7 @@ body, .hero, .hero img {
 
 .call-to-action:before {
   content: "";
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.7);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1246,7 +1246,7 @@ body, .hero, .hero img {
   font-family: Arterio;
   font-size: 28px;
   font-weight: 400;
-  color: #C08B67;
+  color: #477062;
 }
 
 .call-to-action p {
