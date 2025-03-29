@@ -814,18 +814,24 @@ section,
   max-height: 250px;
   width: 100%;
   text-align: center;
-  margin-top: calc(100vh - 150px);
+  margin-top: calc(100vh - 100px);
 }
 
 .hero .icon-box .title {
   font-weight: 700;
   margin-bottom: 15px;
+  margin-top: 5px;
   font-size: 24px;
 }
 
 .hero .icon-box .title a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-family: Arterio;
+  font-size: 30px;
+  font-weight: 500;
   transition: 0.3s;
+  color: #C08B67;
+  padding-top: 0px;
+  margin-top: 0px;
 }
 
 .hero .icon-box .icon {
@@ -838,7 +844,25 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
+.icon-box i:before,
+.icon-box i:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  margin-bottom: 10px;
+  background: var(--accent-color);
+  display: inline-block;
+}
 
+.hero .icon-box i {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  font-size: 48px;
+  line-height: 1;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
 /*--------------------------------------------------------------
 # Hero Section Company
 --------------------------------------------------------------
