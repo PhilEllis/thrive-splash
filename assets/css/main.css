@@ -1081,6 +1081,12 @@ section,
   background: color-mix(in srgb, #9DAF9A 90%, black 15%);
 }
 
+.call-to-action .quote h3 {
+  font-family: Arterio;
+  font-size: 35px;
+  font-weight: 500;
+  color: #477062;
+}
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
