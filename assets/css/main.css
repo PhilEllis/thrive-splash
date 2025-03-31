@@ -371,35 +371,25 @@ h6 {
 }
 
 .navmenu .btn-get-started {
-  display: none;
   color: var(--contrast-color);
-  background: #9DAF9A;
-  border: 0.5px solid #477062;
+  background: #477062;
+  border: 0.5px solid #9DAF9A;
   font-family: var(--heading-font);
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 12px 30px;
+  padding-right: 30px !important;
   transition: 0.5s;
+  box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.2);
 }
 
 .navmenu .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+  background: color-mix(in srgb, #9DAF9A 90%, black 15%);
   color: #f6fcfe;
 }
 
-@media (min-width: 1200px) {
-  .navmenu .btn-get-started {
-    display: none;
-  }
-}
-
-@media (max-width: 1199px) {
-  .navmenu .btn-get-started {
-    display: inline-block;
-  }
-}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -876,225 +866,7 @@ section,
   line-height: 1;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
-/*--------------------------------------------------------------
-# Hero Section Company
---------------------------------------------------------------
-.hero {
-  padding: 0;
-}
 
-.hero .carousel {
-  width: 100%;
-  min-height: calc(100vh - 100px);
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-@media (max-height: 500px),
-(max-width: 1200px) {
-  .hero .carousel {
-    min-height: calc(100vh - 48px);
-  }
-}
-
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero .carousel-item {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.hero .container {
-  background: color-mix(in srgb, var(--surface-color), transparent 50%);
-  position: relative;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin: 0;
-  border-top: 2px solid var(--accent-color);
-}
-
-
-.hero .btn-get-started {
-  color: var(--contrast-color);
-  background: #9DAF9A;
-  border: 0.5px solid #477062;
-  font-family: var(--heading-font);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 30px;
-  transition: 0.5s;
-}
-
-.hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
-}
-
-
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------
-.hero {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  padding: 120px 0 60px;
-  display: flex;
-  align-items: center;
-}
-
-@media (min-width: 1200px) {
-  .hero:after {
-    position: absolute;
-    content: "";
-    width: 44%;
-    background-image: linear-gradient(180deg, color-mix(in srgb, var(--surface-color), transparent 5%), color-mix(in srgb, var(--surface-color), transparent 5%) 70%), linear-gradient(180deg, rgb(222, 216, 198), rgb(222, 216, 198) 70%);
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .hero:after {
-    position: absolute;
-    content: "";
-    width: 50%;
-    background-image: linear-gradient(180deg, color-mix(in srgb, var(--surface-color), transparent 5%), color-mix(in srgb, var(--surface-color), transparent 5%) 70%), linear-gradient(180deg, rgb(222, 216, 198), rgb(222, 216, 198) 70%);
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-  }
-}
-
-@media (max-width: 767px) {
-  .hero {
-    background-image: url('/assets/img/jessmobilecrop.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
-  }
-
-  .hero img {
-    display: none !important;
-  }
-
-  .hero .hero-box {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-  }
-}
-
-.hero:before {
-  position: absolute;
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 40%);
-  inset: 0;
-  z-index: 2;
-}
-
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-
-.hero .container,
-.hero .container-fluid {
-  z-index: 3;
-  position: relative;
-}
-
-.hero h1 {
-  font-family: Arterio;
-  margin: 0;
-  padding-top: 30px;
-  font-size: 3rem;
-  font-weight: 300;
-}
-
-.hero blockquote {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  padding-left: 20px;
-  border-left: 2px solid var(--accent-color);
-  margin: 40px 0;
-}
-
-.hero .btn-get-started {
-  color: var(--contrast-color);
-  background: #9DAF9A;
-  border: 0.5px solid #477062;
-  font-family: var(--heading-font);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 30px;
-  transition: 0.5s;
-}
-
-.hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
-}
-
-.hero .btn-watch-video {
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: var(--default-color);
-  font-weight: 600;
-}
-
-@media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 991px) {
-  .hero h1 {
-    font-size: 38px;
-    line-height: 36px;
-  }
-
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
-    font-size: 14px;
-  }
-}
-
-body, .hero, .hero img {
-  margin: 0;
-  padding: 0;
-}
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
@@ -1291,9 +1063,9 @@ body, .hero, .hero img {
 }
 
 .call-to-action .cta-btn {
-  background: #9DAF9A;
+  background: #477062;
   color: var(--contrast-color);
-  border: 0.5px solid #477062;
+  border: 0.5px solid #9DAF9A;
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
@@ -1302,10 +1074,11 @@ body, .hero, .hero img {
   padding: 12px 40px;
   transition: 0.5s;
   margin: 10px;
+  box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.2);
 }
 
 .call-to-action .cta-btn:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
+  background: color-mix(in srgb, #9DAF9A 90%, black 15%);
 }
 
 /*--------------------------------------------------------------
