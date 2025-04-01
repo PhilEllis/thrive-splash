@@ -90,7 +90,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: 'Arterio';
 }
 
 
@@ -1087,12 +1087,15 @@ section,
   font-weight: 500;
   color: #477062;
 }
+
+
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
 .features h3 {
+  font-family: 'Arterio';
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 
@@ -1142,7 +1145,8 @@ section,
 
 .features .details h4 {
   font-size: 32px;
-  font-weight: 700;
+  font-family: 'Arterio';
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -1151,22 +1155,24 @@ section,
   font-size: 15px;
 }
 
-.features .details .btn-get-started {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
-  font-family: var(--heading-font);
-  display: inline-block;
-  font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 1px;
-  padding: 10px 32px;
-  border-radius: 50px;
-  transition: 0.5s;
-}
-
-.features .details .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
+.features .details .features-btn {
+    background: #477062;
+    color: var(--contrast-color);
+    border: 0.5px solid #9DAF9A;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    transition: 0.5s;
+    margin: 10px;
+    box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .features .details .features-btn:hover {
+    background: color-mix(in srgb, #9DAF9A 90%, black 15%);
+  }
 
 /*--------------------------------------------------------------
 # Recent Posts Section
@@ -1243,10 +1249,11 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section
+# About Section ????
 --------------------------------------------------------------*/
 .about .content h3 {
   font-size: 2rem;
+  font-family: 'Arterio';
   font-weight: 700;
 }
 
@@ -1679,7 +1686,8 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about .about-content h3 {
-  font-weight: 700;
+  font-family: 'Arterio';
+  font-weight: 500;
   font-size: 26px;
 }
 
