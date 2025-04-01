@@ -1781,9 +1781,10 @@ section,
   border: 0;
   padding: 30px;
   transition: 0.3s;
-  border-radius: 10px;
+  border-radius: 2px;
   display: flex;
   cursor: pointer;
+  background: #ffffff;
 }
 
 .tabs .nav-link i {
@@ -1814,7 +1815,7 @@ section,
 }
 
 .tabs .nav-link:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 96%);
+  background: #ffffff;
 }
 
 .tabs .nav-link.active {
