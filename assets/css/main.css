@@ -745,6 +745,20 @@ section,
   }
 }
 
+/* Meet jess Tablet (iPad portrait and landscape) */
+@media (max-width: 1024px) {
+   .hero-jess #hero-carousel .carousel-item img {
+    content: url("/assets/img/meetjessherotablet921.jpg"); /* 768×493 @1× (see below) */
+  }
+}
+
+/* Meet jess Mobile (Mobile portrait and landscape) */
+@media (max-width: 480px) {
+   .hero-jess #hero-carousel .carousel-item img {
+    content: url("/assets/img/meetjessheromobile480y.jpg"); /* 768×493 @1× (see below) */
+  }
+}
+
 .hero .icon-box img {
   position: relative;
   max-width: 90px;
