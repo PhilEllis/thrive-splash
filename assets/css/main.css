@@ -731,19 +731,20 @@ section,
   z-index: 1;
 }
 
-/* Tablet (iPad portrait and landscape) */
+/* Index Tablet (iPad portrait and landscape) */
 @media (max-width: 1024px) {
    .hero-index #hero-carousel .carousel-item img {
     content: url("/assets/img/homeherotablet921.jpg"); /* 768×493 @1× (see below) */
   }
 }
 
-/* Tablet (Mobile portrait and landscape) */
+/* Index Mobile (Mobile portrait and landscape) */
 @media (max-width: 480px) {
    .hero-index #hero-carousel .carousel-item img {
     content: url("/assets/img/homeherophone480.jpg"); /* 768×493 @1× (see below) */
   }
 }
+
 .hero .icon-box img {
   position: relative;
   max-width: 90px;
@@ -1101,6 +1102,25 @@ section,
   color: #477062;
 }
 
+@@media (max-width: 640px) {
+  .call-to-action img {
+    display: none;
+  }
+
+  .call-to-action {
+    /* remove the fixed parallax behavior */
+    background-attachment: scroll !important;
+
+    /* mobile‐optimized banner */
+    background-image: url("/assets/img/staticbanner640.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* make the section tall enough */
+    min-height: 427px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Features Section
