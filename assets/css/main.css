@@ -917,6 +917,12 @@ section,
   z-index: 1;
 }
 
+@media (max-width: 1024px) /* or whatever breakpoint you care about */ {
+  .why-us .img-bg img {
+    content: url("/assets/img/jessaboutipadcrop.jpg");
+  }
+}
+
 .why-us .slides {
   background-color: #ffffff;
 }
