@@ -863,6 +863,97 @@ section,
   margin-top: 0px;
 }
 
+/* Keep icon-box title on one line at narrower screens */
+@media (max-width: 995px) {
+  .hero .icon-box .title {
+    /* override the 24px base if needed */
+    font-size: 20px;
+  }
+  .hero .icon-box .title a {
+    /* override the 36px link size down to something that fits */
+    font-size: 30px;
+  }
+  /* shorten the lines on either side */
+  .hero .icon-box .title:before,
+  .hero .icon-box .title:after {
+    width: 30px;            /* down from 50px */
+    margin-left: 5px;       /* down from 10px */
+    margin-right: 5px;      /* down from 10px */
+  }
+   /* now target the subtitle immediately below the h3 */
+  /* option A: all h4s inside the icon‐box */
+  .hero .icon-box h4 {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+}
+
+/* Keep icon-box title on one line at narrower screens */
+@media (max-width: 769px) {
+  .hero .icon-box .title {
+    /* override the 24px base if needed */
+    font-size: 14px;
+  }
+  .hero .icon-box .title a {
+    /* override the 36px link size down to something that fits */
+    font-size: 20px;
+  }
+  /* shorten the lines on either side */
+  .hero .icon-box .title:before,
+  .hero .icon-box .title:after {
+    width: 20px;            /* down from 50px */
+    margin-left: 5px;       /* down from 10px */
+    margin-right: 5px;      /* down from 10px */
+  }
+   /* now target the subtitle immediately below the h3 */
+  /* option A: all h4s inside the icon‐box */
+  .hero .icon-box h4 {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}
+
+/* Keep icon-box title on one line at narrower screens */
+@media (max-width: 539px) {
+  .hero-jess .icon-box .title {
+    /* override the 24px base if needed */
+    font-size: 10px;
+  }
+  .hero-jess .icon-box .title a {
+    /* override the 36px link size down to something that fits */
+    font-size: 16px;
+  }
+  /* shorten the lines on either side */
+  .hero-jess .icon-box .title:before,
+  .hero-jess .icon-box .title:after {
+    width: 10px;            /* down from 50px */
+    margin-left: 5px;       /* down from 10px */
+    margin-right: 5px;      /* down from 10px */
+  }
+}
+
+/* Keep icon-box title on one line at narrower screens */
+@media (max-width: 360px) {
+
+  .hero-jess .icon-box .title {
+    /* override the 24px base if needed */
+    font-size: 8px;
+  }
+  .hero-jess .icon-box .title a {
+    /* override the 36px link size down to something that fits */
+    font-size: 14px;
+  }
+ 
+  /* shorten the lines on either side */
+  .hero-jess .icon-box .title:before,
+  .hero-jess .icon-box .title:after {
+    width: 5px;            /* down from 50px */
+    margin-left: 5px;       /* down from 10px */
+    margin-right: 5px;      /* down from 10px */
+  }
+}
+
+
 .hero .icon-box .icon {
   margin-bottom: 20px;
   padding-top: 10px;
