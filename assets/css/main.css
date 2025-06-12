@@ -844,6 +844,16 @@ section,
   width: 100%;
   text-align: center;
   margin-top: calc(100vh - 100px);
+  min-height: 290px;
+}
+
+.icon-box h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  white-space: nowrap;
 }
 
 .hero .icon-box .title {
@@ -864,90 +874,19 @@ section,
 }
 
 /* Keep icon-box title on one line at narrower screens */
-@media (max-width: 995px) {
-  .hero .icon-box .title {
-    /* override the 24px base if needed */
-    font-size: 20px;
-  }
-  .hero .icon-box .title a {
-    /* override the 36px link size down to something that fits */
-    font-size: 30px;
-  }
-  /* shorten the lines on either side */
-  .hero .icon-box .title:before,
-  .hero .icon-box .title:after {
-    width: 30px;            /* down from 50px */
-    margin-left: 5px;       /* down from 10px */
-    margin-right: 5px;      /* down from 10px */
-  }
-   /* now target the subtitle immediately below the h3 */
-  /* option A: all h4s inside the icon‐box */
-  .hero .icon-box h4 {
-    font-size: 16px;
-    margin-top: 8px;
-  }
-}
-
-/* Keep icon-box title on one line at narrower screens */
-@media (max-width: 769px) {
-  .hero .icon-box .title {
-    /* override the 24px base if needed */
-    font-size: 14px;
-  }
-  .hero .icon-box .title a {
-    /* override the 36px link size down to something that fits */
-    font-size: 20px;
-  }
-  /* shorten the lines on either side */
-  .hero .icon-box .title:before,
-  .hero .icon-box .title:after {
-    width: 20px;            /* down from 50px */
-    margin-left: 5px;       /* down from 10px */
-    margin-right: 5px;      /* down from 10px */
-  }
-   /* now target the subtitle immediately below the h3 */
-  /* option A: all h4s inside the icon‐box */
-  .hero .icon-box h4 {
-    font-size: 12px;
-    margin-top: 8px;
-  }
-}
-
-/* Keep icon-box title on one line at narrower screens */
 @media (max-width: 539px) {
-  .hero-jess .icon-box .title {
+  .hero .icon-box .title {
     /* override the 24px base if needed */
-    font-size: 10px;
+    font-size: 20px;
   }
-  .hero-jess .icon-box .title a {
+  .hero .icon-box .title a {
     /* override the 36px link size down to something that fits */
-    font-size: 16px;
+    font-size: 24px;
   }
   /* shorten the lines on either side */
-  .hero-jess .icon-box .title:before,
-  .hero-jess .icon-box .title:after {
-    width: 10px;            /* down from 50px */
-    margin-left: 5px;       /* down from 10px */
-    margin-right: 5px;      /* down from 10px */
-  }
-}
-
-/* Keep icon-box title on one line at narrower screens */
-@media (max-width: 360px) {
-
-  .hero-jess .icon-box .title {
-    /* override the 24px base if needed */
-    font-size: 8px;
-  }
-  .hero-jess .icon-box .title a {
-    /* override the 36px link size down to something that fits */
-    font-size: 14px;
-  }
- 
-  /* shorten the lines on either side */
-  .hero-jess .icon-box .title:before,
-  .hero-jess .icon-box .title:after {
-    width: 5px;            /* down from 50px */
+  .hero .icon-box .title:before,
+  .hero .icon-box .title:after {
+    max-width: 20px;            /* down from 50px */
     margin-left: 5px;       /* down from 10px */
     margin-right: 5px;      /* down from 10px */
   }
@@ -967,13 +906,10 @@ section,
 .icon-box h3:before,
 .icon-box h3:after {
   content: "";
-  width: 50px;
+  flex: 1 0 50px;
   height: 2px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
   background: var(--accent-color);
-  display: inline-block;
+  max-width: 50px;
 }
 
 .hero .icon-box i {
@@ -1008,7 +944,7 @@ section,
   z-index: 1;
 }
 
-@media (max-width: 1024px) /* or whatever breakpoint you care about */ {
+@media (max-width: 1200px) /* or whatever breakpoint you care about */ {
   .why-us .img-bg img {
     content: url("/assets/img/jessaboutipadcrop.jpg");
   }
@@ -1213,7 +1149,7 @@ section,
   color: #477062;
 }
 
-@@media (max-width: 640px) {
+@media (max-width: 640px) {
   .call-to-action img {
     display: none;
   }
@@ -1230,6 +1166,21 @@ section,
 
     /* make the section tall enough */
     min-height: 427px;
+  }
+}
+
+@media (max-width: 640px) {
+  .quote img {
+    display: none;
+  }
+
+  .quote {
+    background-image: url("/assets/img/jessquotecopy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 227px;
   }
 }
 
