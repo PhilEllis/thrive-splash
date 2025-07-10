@@ -843,7 +843,7 @@ section,
   max-height: 250px;
   width: 100%;
   text-align: center;
-  margin-top: calc(100vh - 100px);
+  margin-top: 80vh;
   min-height: 290px;
 }
 
