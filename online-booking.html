@@ -86,29 +86,34 @@
 
       </div><!-- End Section Title -->
 
-      <div class="row gy-5">
-          <div class="col-12">
-            <div class="ph-widget-container">
-<!-- Booking Widget -->
-<div id="ph_online_bookings_widget"></div>
+      <section id="booking" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        
+        <!-- Booking Widget -->
+        <div id="ph_online_bookings_widget"></div>
 
-<!-- Configuration Script -->
-<script>
-  window.BookingTrackerConfig = {
-    domain: "thrivefamilychiro.neptune.practicehub.io"
-  };
+        <!-- Configuration Script -->
+        <script>
+          window.BookingTrackerConfig = {
+            domain: "thrivefamilychiro.neptune.practicehub.io"
+          };
 
-  const phob_embed_version = ~~(Date.now()/3600000);
-  const phob_embed_script = document.createElement('script');
-  phob_embed_script.id = 'ph-embed';
-  phob_embed_script.setAttribute('data-ph-embed', '');
-  phob_embed_script.type = 'text/javascript';
-  phob_embed_script.src = `https://thrivefamilychiro.neptune.practicehub.io/assets/js/booking-form-embed.js?v=${phob_embed_version}`;
-  document.currentScript.parentNode.insertBefore(phob_embed_script, document.currentScript.nextSibling);
-</script>
-            </div>
-            </div>
-            </div>
+          const phob_embed_version = ~~(Date.now()/3600000);
+          const phob_embed_script = document.createElement('script');
+          phob_embed_script.id = 'ph-embed';
+          phob_embed_script.setAttribute('data-ph-embed', '');
+          phob_embed_script.type = 'text/javascript';
+          phob_embed_script.src = `https://thrivefamilychiro.neptune.practicehub.io/assets/js/booking-form-embed.js?v=${phob_embed_version}`;
+          document.currentScript.parentNode.insertBefore(phob_embed_script, document.currentScript.nextSibling);
+        </script>
+
+      </div>
+    </div>
+  </div>
+</section>
+
                                       
           
       <div class="container copyright text-center mt-4">
