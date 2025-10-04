@@ -765,14 +765,14 @@ section,
 --------------------------------------------------------------*/
 .hero {
   padding: 0;
-   --iconbox-peek: 50%;   /* how much of its own height to push down */
-   --iconbox-offset: 0px; /* extra pixel offset from the fold if you want a gap */
-   --ibox-h: 280px;          /* set to your card’s min/typical height */
-   --ibox-peek: 0.5;         /* 0.5 = 50% below the fold */
-   --ibox-peek-px: calc(var(--ibox-h) * var(--ibox-peek));
 
-  /* COMPENSATION so the overflow is scrollable */
-  padding-bottom: var(--ibox-peek-px);
+  /* Unified knobs (desktop defaults) */
+  --ibox-h: 280px;             /* icon-box target height on desktop */
+  --ibox-peek: 0.5;            /* fraction of the card BELOW the fold (0.5 = half) */
+  --ibox-offset: 0px;          /* extra gap above the fold if desired */
+
+  /* Compensation so the below-fold part is scrollable */
+  padding-bottom: calc(var(--ibox-h) * var(--ibox-peek) + var(--ibox-offset));
 }
 
 .hero .carousel {
@@ -781,6 +781,7 @@ section,
   padding: 0;
   margin: 0;
   position: relative;
+  overflow: visible; /* important: let the peeking part show */
 }
 
 @media (max-height: 500px),
@@ -802,29 +803,29 @@ section,
 
 /* Index Tablet (iPad portrait and landscape) */
 @media (max-width: 1024px) {
-   .hero-index #hero-carousel .carousel-item img {
-    content: url("/assets/img/homeherotablet921.jpg"); /* 768×493 @1× (see below) */
+  .hero-index #hero-carousel .carousel-item img {
+    content: url("/assets/img/homeherotablet921.jpg");
   }
 }
 
 /* Index Mobile (Mobile portrait and landscape) */
 @media (max-width: 480px) {
-   .hero-index #hero-carousel .carousel-item img {
-    content: url("/assets/img/homeherophone480.jpg"); /* 768×493 @1× (see below) */
+  .hero-index #hero-carousel .carousel-item img {
+    content: url("/assets/img/homeherophone480.jpg");
   }
 }
 
 /* Meet jess Tablet (iPad portrait and landscape) */
 @media (max-width: 1024px) {
-   .hero-jess #hero-carousel .carousel-item img {
-    content: url("/assets/img/meetjessherotablet921.jpg"); /* 768×493 @1× (see below) */
+  .hero-jess #hero-carousel .carousel-item img {
+    content: url("/assets/img/meetjessherotablet921.jpg");
   }
 }
 
 /* Meet jess Mobile (Mobile portrait and landscape) */
 @media (max-width: 480px) {
-   .hero-jess #hero-carousel .carousel-item img {
-    content: url("/assets/img/meetjessheromobile480y.jpg"); /* 768×493 @1× (see below) */
+  .hero-jess #hero-carousel .carousel-item img {
+    content: url("/assets/img/meetjessheromobile480y.jpg");
   }
 }
 
@@ -850,7 +851,6 @@ section,
   z-index: 3;
 }
 
-
 .hero h2 {
   font-size: 48px;
   font-weight: 700;
@@ -866,12 +866,12 @@ section,
   font-weight: 300;
   color: #6B7269;
 }
+
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   font-weight: 400;
   margin-bottom: 10px;
 }
-
 
 @media (max-width: 640px) {
   .hero h2 {
@@ -884,25 +884,23 @@ section,
   }
 }
 
-/* Make the wrapper overlay and half-peek below the fold */
+/* --- Overlay wrapper and half-peek (UNIFIED) --- */
 .hero .icon-boxes {
-  position: absolute;           /* was relative */
+  position: absolute !important; /* beat any .position-relative utility in HTML */
   left: 0;
   right: 0;
-  bottom: var(--iconbox-offset);
-  transform: translateY(var(--iconbox-peek)); /* 50% => half below the fold */
+  bottom: var(--ibox-offset);
+  transform: translateY(calc(var(--ibox-peek) * 100%)) !important;
   padding-bottom: 0;
-  z-index: 4;                   /* above the image (z-index:1) */
+  z-index: 4; /* above the image (z-index:1) */
 }
 
-/* 2) Half-peek: move the card down by 50% of its own height */
+/* Predictable card size; no transforms here */
 .hero .icon-boxes .icon-box {
-  /* remove the big push-down & height conflict */
-  margin-top: 0;            /* ensure old margin-top: 80vh is gone */
-  min-height: 260px;        /* pick one; adjust to taste */
+  margin-top: 0;                /* ensure the old 80vh never returns */
+  min-height: var(--ibox-h);
   max-height: none;
-
-  transform: translateY(50%);  /* half below the fold */
+  transform: none !important;   /* wrapper controls the movement */
 }
 
 @media (min-width: 1200px) {
@@ -916,15 +914,6 @@ section,
   }
 }
 
-/* Optional fine-tune per device */
-@media (max-height: 600px) {
-  .hero .icon-boxes .icon-box { transform: translateY(40%); }
-}
-@media (max-width: 480px) {
-  .hero .icon-boxes .icon-box { transform: translateY(55%); }
-}
-
-
 .hero .icon-box {
   padding: 60px 30px;
   position: relative;
@@ -936,7 +925,7 @@ section,
   z-index: 1;
   width: 100%;
   text-align: center;
-  min-height: 290px;
+  min-height: 290px; /* kept for legacy; overridden above by the more specific rule */
 }
 
 .icon-box h3 {
@@ -966,24 +955,36 @@ section,
 }
 
 /* Keep icon-box title on one line at narrower screens */
-@media (max-width: 539px) {
+@media (max-width: 767px) {
   .hero .icon-box .title {
-    /* override the 24px base if needed */
-    font-size: 20px;
+    font-size: 25px;
   }
   .hero .icon-box .title a {
-    /* override the 36px link size down to something that fits */
-    font-size: 24px;
+    font-size: 29px;
   }
-  /* shorten the lines on either side */
   .hero .icon-box .title:before,
   .hero .icon-box .title:after {
-    max-width: 20px;            /* down from 50px */
-    margin-left: 5px;       /* down from 10px */
-    margin-right: 5px;      /* down from 10px */
+    max-width: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 
+/* Keep icon-box title on one line at narrower screens */
+@media (max-width: 539px) {
+  .hero .icon-box .title {
+    font-size: 20px;
+  }
+  .hero .icon-box .title a {
+    font-size: 24px;
+  }
+  .hero .icon-box .title:before,
+  .hero .icon-box .title:after {
+    max-width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
 
 .hero .icon-box .icon {
   margin-bottom: 20px;
@@ -1012,6 +1013,42 @@ section,
   font-size: 48px;
   line-height: 1;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+/* =========================
+   RESPONSIVE TUNING
+   ========================= */
+
+   /* Large tablets & small laptops (≤1199px) */
+@media (max-width: 1199px) {
+  .hero {
+    --ibox-h: 270px;   /* a touch smaller than desktop */
+    --ibox-peek: 0.36; /* lower value = higher card */
+    --ibox-offset: 0px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero {
+    --ibox-h: 260px;  /* slightly smaller card */
+    --ibox-peek: 0.30;/* show a touch more below the fold to keep ~half visible */
+  }
+}
+
+/* Phone */
+@media (max-width: 540px) {
+  .hero {
+    --ibox-h: 220px;  /* smaller card on phones */
+    --ibox-peek: 0.32;/* adjust peek so it still looks like ~half */
+  }
+}
+
+/* Very short viewports (e.g., landscape phones) */
+@media (max-height: 680px) {
+  .hero {
+    --ibox-peek: 0.44; /* pull more above the fold when height is tight */
+  }
 }
 
 /*--------------------------------------------------------------
