@@ -799,8 +799,12 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 30%;
+  object-position: 50% 20%;
   z-index: 1;
+}
+
+#hero.hero-index #hero-carousel .carousel-item > img {
+  object-position: 50% 30%;
 }
 
 /* Index Tablet (iPad portrait and landscape) */
