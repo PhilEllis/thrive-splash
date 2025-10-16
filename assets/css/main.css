@@ -817,7 +817,7 @@ section,
 /* Index Mobile (Mobile portrait and landscape) */
 @media (max-width: 480px) {
   .hero-index #hero-carousel .carousel-item img {
-    content: url("/assets/img/homeherojessphone.jpg");
+    content: url("/assets/img/homeherosmaller.jpg");
   }
 }
 
