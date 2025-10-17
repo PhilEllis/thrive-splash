@@ -817,7 +817,7 @@ section,
 /* Index Mobile (Mobile portrait and landscape) */
 @media (max-width: 480px) {
   .hero-index #hero-carousel .carousel-item img {
-    content: url("/assets/img/homeherosmaller.jpg");
+    content: url("/assets/img/homeherophoneshort.jpg");
   }
 }
 
@@ -1057,6 +1057,11 @@ section,
   }
 }
 
+@media (max-width: 540px) {
+  .hero.hero-index { --ibox-peek: 0.23; } /* lower value = sits higher */
+  /* or pixel nudge: */
+  /* .hero.hero-index .icon-boxes { transform: translateY(calc(var(--ibox-peek) * 100% - 16px)); } */
+}
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
